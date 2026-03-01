@@ -57,9 +57,9 @@ source .venv/bin/activate
 
 1. In the Google Cloud Console enable the *Google Drive API* for a project.
 2. Create OAuth 2.0 credentials (Application type: *Desktop app*).
-3. Download the credentials JSON and save it as `credentials.json` in the project root (do not commit this file).
+3. Download the credentials JSON and save it as `credentials.json` in the project root.
 
-On first run the tool opens a browser to authorize access and caches a `token.json` file; do not commit that file either.
+On first run the tool opens a browser to authorize access and caches a `token.json` file.
 
 ## Usage
 
@@ -124,8 +124,6 @@ The tool uses Ghostscript presets for compression. Available presets:
 - `printer` — higher quality for printing
 - `prepress` — minimal compression, preserves quality
 
-Advanced users can combine `qpdf` or `mutool` with Ghostscript for additional optimizations; see local documentation or open an issue for integration suggestions.
-
 ## Troubleshooting
 
 - 403 / Access Denied: confirm the Drive folder is shared with the Google account used to authorize the tool; ensure the Drive API is enabled in the Cloud Console and, if the OAuth consent screen is in testing mode, add the Google account as a test user.
@@ -135,7 +133,5 @@ Advanced users can combine `qpdf` or `mutool` with Ghostscript for additional op
 ## License & contribution
 
 - **License:** This project is licensed under the MIT License - see the `LICENSE` file.
-
-When publishing or sharing the repository, do not commit `credentials.json` or `token.json` — use a secure secret store instead.
 
 ---
